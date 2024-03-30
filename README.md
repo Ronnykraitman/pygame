@@ -6,6 +6,7 @@ This repo is part of my 100 days - 100 python projects
 
 ## Before you start
 - Please use python 3.10 or above
+- Make sure you have pip installed (https://pypi.org/project/pip/)
 - Easily install the requirements:
 ```
 python3 -m pip install -r requirements.txt
