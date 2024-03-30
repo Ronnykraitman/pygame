@@ -19,6 +19,7 @@ the_rules = '''
 ########################################################################################################
 '''
 
+
 def get_card(cards_deck: list):
     global used_cards
     card = random.choice(cards_deck)
@@ -43,7 +44,6 @@ def calculate_score(card: tuple, total_score: int):
 
 
 def check_winner(player_score, python_score, external_player_name, player_cards, python_cards):
-
     player_diff = abs(21 - player_score)
     python_diff = abs(21 - python_score)
 
@@ -58,17 +58,17 @@ def check_winner(player_score, python_score, external_player_name, player_cards,
 
 def print_player_hand(player_cards: list):
     print()
-    handSize = len(player_cards)
-    print('┌───────┐ ' * handSize)
+    hand_size = len(player_cards)
+    print('┌───────┐ ' * hand_size)
     for card in player_cards:
         print(f'| {card[0]:<2}    | ', end='')
-    print('\n' + '|       | ' * handSize)
+    print('\n' + '|       | ' * hand_size)
     for card in player_cards:
         print(f'|   {card[1]}   | ', end='')
-    print('\n' + '|       | ' * handSize)
+    print('\n' + '|       | ' * hand_size)
     for card in player_cards:
         print(f'|    {card[0]:>2} | ', end='')
-    print('\n' + '└───────┘ ' * handSize)
+    print('\n' + '└───────┘ ' * hand_size)
     print()
 
 
@@ -94,8 +94,8 @@ def check_player_bust_or_clean_win(player_score, external_player_name, player_ca
         return external_player_name
     return None
 
-def play_blackjack(external_player_name=None):
 
+def play_blackjack(external_player_name=None):
     if external_player_name is None:
         external_player_name = f"{Bright_Cyan}{get_user_name()}{Color_Off}"
 
@@ -106,15 +106,16 @@ def play_blackjack(external_player_name=None):
         for cc in court_cards:
             cards_deck.append((cc, suit))
 
-    tokens = ["1", "5", "25", "50", "100", "500", "1000"]
+    # tokens = ["1", "5", "25", "50", "100", "500", "1000"]
+    # player_money = 1000
+    # blackjack_winner = None
+    # cards_array = []
 
     player_cards = []
     python_cards = []
     player_score = 0
     python_score = 0
-    player_money = 1000
-    blackjack_winner = None
-    cards_array = []
+
     blackjack_moves = ["Hit", "Stay"]
 
     for i in range(2):
@@ -134,7 +135,8 @@ def play_blackjack(external_player_name=None):
         card = get_card(cards_deck)
         player_score = calculate_score(card, player_score)
         player_cards.append(card)
-        blackjack_winner = check_player_bust_or_clean_win(player_score, external_player_name, player_cards, python_cards)
+        blackjack_winner = check_player_bust_or_clean_win(player_score, external_player_name, player_cards,
+                                                          python_cards)
 
         if not blackjack_winner:
             print_game_hands([python_cards[0]], external_player_name, player_cards, player_score)
@@ -155,7 +157,8 @@ def play_blackjack(external_player_name=None):
             print(f"The winner is {external_player_name} !!!!\n")
             return external_player_name
         else:
-            blackjack_winner = check_winner(player_score, python_score, external_player_name, player_cards, python_cards)
+            blackjack_winner = check_winner(player_score, python_score, external_player_name, player_cards,
+                                            python_cards)
             print(f"The winner is {blackjack_winner} !!!!\n")
     return external_player_name
 
