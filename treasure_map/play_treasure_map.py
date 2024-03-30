@@ -31,9 +31,6 @@ def _convert_string_coordinates_to_tuple(coordinates):
 
 
 def play_treasure_map(external_player_name=None):
-    print("\nWelcome to Find The Treasure 📍")
-    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
-    print(the_rules + "\n")
     if external_player_name is None:
         external_player_name = f"{Bright_Cyan}{get_user_name()}{Color_Off}"
     current_player = external_player_name
@@ -91,6 +88,9 @@ def play_treasure_map(external_player_name=None):
 
 
 def treasure_map():
+    print("\nWelcome to Find The Treasure 📍")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
+    print(the_rules + "\n")
     stop = False
     external_player_name = play_treasure_map()
     while not stop:
@@ -102,4 +102,5 @@ def treasure_map():
             case 1:
                 from main import start
                 stop = True
+                print("\nSee you later 🎯🎯🎯\n")
                 start()

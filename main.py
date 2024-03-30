@@ -3,9 +3,12 @@ import signal
 
 from arts.logos import logo_game_hub
 from treasure_map.play_treasure_map import treasure_map
+from rock_paper_scissors_lizard_spock.play_rock_paper_scissors_lizard_spock import rock_paper_scissors_lizard_spock
 from utils.functions import _generate_options_for_selection, _single_selection
 
-games_list = [("Treasure Map", treasure_map)]
+games_list = [("Treasure Map", treasure_map),
+              ("Rock Paper Scissors Lizard Spock", rock_paper_scissors_lizard_spock)
+              ]
 
 
 def goodbye():
