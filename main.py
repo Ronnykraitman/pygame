@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 import signal
 
-from arts.logos import logo_game_hub
+from common.logos import logo_game_hub
 from treasure_map.play_treasure_map import treasure_map
 from rock_paper_scissors_lizard_spock.play_rock_paper_scissors_lizard_spock import rock_paper_scissors_lizard_spock
+from blackjack.play_blackjack import blackjack
 from utils.functions import _generate_options_for_selection, _single_selection
 
 games_list = [("Treasure Map", treasure_map),
-              ("Rock Paper Scissors Lizard Spock", rock_paper_scissors_lizard_spock)
+              ("Rock Paper Scissors Lizard Spock", rock_paper_scissors_lizard_spock),
+              ("Blackjack", blackjack)
               ]
 
 

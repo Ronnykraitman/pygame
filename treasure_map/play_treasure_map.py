@@ -2,8 +2,8 @@ import random
 import sys
 from time import sleep
 
-from arts.colors import Bright_Cyan, Color_Off, Yellow
-from arts.logos import python_name, python_logo, dots
+from common.colors import Bright_Cyan, Color_Off, Yellow
+from common.logos import python_name, python_logo, dots
 from prettytable import PrettyTable
 import itertools
 

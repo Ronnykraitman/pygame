@@ -1,8 +1,8 @@
 import random
 
-from arts.colors import Bright_Cyan, Color_Off
-from arts.lists import sweet_words
-from arts.logos import python_name
+from common.colors import Bright_Cyan, Color_Off
+from common.lists import sweet_words
+from common.logos import python_name
 from simple_term_menu import TerminalMenu
 
 

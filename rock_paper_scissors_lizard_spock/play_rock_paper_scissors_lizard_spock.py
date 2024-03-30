@@ -1,5 +1,5 @@
-from arts.colors import Bright_Cyan, Color_Off, Bright_Magenta
-from arts.logos import python_name
+from common.colors import Bright_Cyan, Color_Off, Bright_Magenta
+from common.logos import python_name
 from rock_paper_scissors_lizard_spock.art import rock, paper, scissors, lizard, spock, logo_3, logo_2, logo_1
 import random
 import sys
