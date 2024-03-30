@@ -1,0 +1,3 @@
+prettytable~=3.10.0
+simple-term-menu
+requests~=2.31.0
