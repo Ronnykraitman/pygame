@@ -131,7 +131,7 @@ def hang_non_binary_person():
             case 0:
                 play_hang_non_binary_person(external_player_name)
             case 1:
-                from main import start
+                from play import start
                 stop = True
                 print("\nSee you later 🎳🎳🎳\n")
                 start()

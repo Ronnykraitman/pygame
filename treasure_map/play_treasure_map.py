@@ -100,7 +100,7 @@ def treasure_map():
             case 0:
                 play_treasure_map(external_player_name)
             case 1:
-                from main import start
+                from play import start
                 stop = True
                 print("\nSee you later 🎯🎯🎯\n")
                 start()

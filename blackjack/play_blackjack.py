@@ -176,7 +176,7 @@ def blackjack():
             case 0:
                 play_blackjack(external_player_name)
             case 1:
-                from main import start
+                from play import start
                 stop = True
                 print("\nSee you later 🃏🃏🃏\n")
                 start()
