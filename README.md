@@ -12,7 +12,7 @@ This repo is part of my 100 days - 100 python projects
 python3 -m pip install -r requirements.txt
 ```
 
-activate the game hub by running ```python3 main.py```
+activate the game hub by running ```python3 play.py```
 
 ## The games
 
